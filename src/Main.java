@@ -24,10 +24,13 @@ public class Main {
         boolean continuar = true;
         Scanner input = new Scanner(System.in);
 
+        // enquanto a opção 7 não for selecionada, o boolean vai continuar true e novas operações continuarão sendo requisitadas ao sistema
         while (continuar) {
             System.out.println(inicio);
 
+            // pega o numero inteiro correspondente a operacao requisitada pelo usuario
             int operacao = input.nextInt();
+            // inicializacao da classe responsavel por todo o processo de conversao
             Conversoes conversao = new Conversoes();
 
             switch (operacao) {

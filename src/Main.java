@@ -26,6 +26,7 @@ public class Main {
 
         // enquanto a opção 7 não for selecionada, o boolean vai continuar true e novas operações continuarão sendo requisitadas ao sistema
         while (continuar) {
+
             System.out.println(inicio);
 
             // pega o numero inteiro correspondente a operacao requisitada pelo usuario

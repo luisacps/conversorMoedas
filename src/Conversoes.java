@@ -31,8 +31,8 @@ public class Conversoes {
             var taxa = object.get("conversion_rate").getAsDouble();
             BigDecimal bd = new BigDecimal(taxa);
             // transformando a taxa de conversão num numero com 2 casas decimais
-            bd.setScale(2, RoundingMode.HALF_UP);
-            double taxaDeConversao = bd.doubleValue();
+            var taxaAjustada = bd.setScale(2, RoundingMode.HALF_UP);
+            double taxaDeConversao = taxaAjustada.doubleValue();
 
             // pedindo ao usuario que inclua um valor para conversao
             Scanner valor = new Scanner(System.in);
@@ -49,9 +49,8 @@ public class Conversoes {
     }
 
     // metodo que faz a operacao de cambio
-    public double CalcularCambio(double taxa, double valor, String m1, String m2) {
+    public void CalcularCambio(double taxa, double valor, String m1, String m2) {
         double resultado = valor * taxa;
         System.out.println("Após a conversão, o valor de " + valor + " " + m1 + " passa a ser de " + resultado + " " + m2);
-        return resultado;
     }
 }
